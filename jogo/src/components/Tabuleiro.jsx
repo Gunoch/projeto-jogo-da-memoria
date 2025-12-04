@@ -1,16 +1,18 @@
 import React from "react";
-import Carta from "./Carta"
+import Carta from "./Carta";
 
-function Tabuleiro ({ cartas, aoClicarCarta }) {
+function Tabuleiro({ cartas, aoClicar }) {
     return (
         <div className="tabuleiro">
             {cartas.map((carta, indice) => (
                 <Carta
                     key={carta.id}
                     carta={carta}
-                    onClick={() => aoClicarCarta(indice)}
+                    onClick={() => aoClicar(indice)}
                 />
             ))}
         </div>
     );
 }
+
+export default Tabuleiro;
